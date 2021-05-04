@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-content: center;
 }
-.glasscard{
+.glasscard {
     border: 3px solid #53f0ff;
     box-shadow: 5px 10px 10px 5px rgb(187 187 187 / 22%);
     border-radius: .5rem;
@@ -25,7 +25,7 @@ body {
     min-width: 80%;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: #00ffed3d;
+    background: #2f5d7f6e;
     color: white;
     font-size: 1.4rem;
 }
@@ -34,4 +34,63 @@ body {
     font-weight: 900;
     font-size: 1.6rem;
     text-align: center;
+}
+.myinput{
+    height: 3rem;
+
+}
+.link {
+    width: 99%;
+    margin: 0px;
+    background: none;
+    border-radius: .3rem;
+    color: white;
+    border-color: #53f0ff;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    font-family: var(--font);
+    height: 3rem;
+}
+.video-label{
+    margin: 0rem !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: #53f0ff;
+    text-shadow: 10px 10px 10px rgb(16 16 16 / 21%);
+}
+
+
+
+.neon-button {
+    background: #ee5e5e;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 0px;
+}
+.neon-button:hover{
+    box-shadow: 1px 1px 10px 6px rgb(156 206 208 / 22%);
+    background: #53f0ff;
+    color: #002352;
+    transition: all 0.5s ease;
+    
+
+}
+.neon-button:focus{
+    box-shadow: 1px 1px 10px 6px rgb(156 206 208 / 22%);
+    background: #53f0ff;
+    color: #002352;
+    transition: all 0.5s ease;
+}
+.active2{
+    box-shadow: 1px 1px 10px 6px rgb(156 206 208 / 22%);
+    background: #53f0ff;
+    color: #002352;
+    transition: all 0.5s ease;
+}
+
+.res{
+    transition: all 0.7s ease-in;
 }

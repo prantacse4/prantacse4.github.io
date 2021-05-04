@@ -18,43 +18,43 @@
             <div class="glasscard">
                 <div class="cardheader">
                     ইউটিউব থেকে সহজে ভিডিও ডাউনলোড করুন
+                </div><hr>
+                <div class="myinput">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-12">
+                            <label class="video-label">ভিডিও লিংক দিন</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="link url" type="text">
+                        </div>
+                    </div> 
                 </div>
+                <br><br>
+                <div class="res ">
+                    <div class=" text-center">
+                        <label class="video-label text-center">ফাইল টাইপ সিলেক্ট করুন</label>
+                        <div class="row mt-3">
+                            <div class=" col-md-3 col-sm-4 ">
+                                <button class="btn btn-primary mt-3 neon-button top">1080p ভিডিও</button>
+                            </div>
+                            <div class=" col-md-3 col-sm-4">
+                                <button class="btn btn-primary mt-3 neon-button high">720p ভিডিও</button>
+                            </div>
+                            <div class=" col-md-3 col-sm-4">
+                                <button class="btn btn-primary mt-3 neon-button mid">480p ভিডিও</button>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <button class="btn btn-primary mt-3 neon-button mp3">MP3 অডিও</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="download-video text-center"></div>
+                </div>
+                
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-header bg-primary"><h5 class="text-white text-center">Drop Your Youtube Link</h5></div>
-            <form class="myform">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label class="form-control-label mt-3">Link</label>
-                        <input type="text"  name="link" class="link form-control" required>
-                        <label class="form-control-label mt-3">Select Format</label>
-                        <Select class="form-control form-control-select format" required>
-                            <option selected value="720">720p Video</option>
-                            <option value="360">360p Video</option>
-                            <option value="480">480p Video</option>
-                            <option value="1080">1080p Video</option>
-                            <option value="mp3">MP3 AUDIO</option>
-
-                        </Select>
-    
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12 col-sm-12">
-                        <button class="btn btn-primary mt-3">Download</button>
-                        <input type="reset" class="btn btn-warning mt-3 ml-2" value="Reset">
-
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                            <div class="download-video "></div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </form>
-        </div>
     </div>
 
 
@@ -62,20 +62,71 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 
 <script>
     $(".download-video").hide();
-    $(".myform").on('submit',function(e){
+    $(".res").hide();
+    var format = null;
+    var link = null;
+    var mylink = null;
+    $('.link').on('input',function(e){
+        $(".res").show();
+        link = $(".url").val();
 
-        e.preventDefault();
-        var link = $(".link").val();
-        var format = $(".format").children("option:selected").val();
-        var mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
-        downloadVideo(link,format); 
     });
+    
+
+    $('.top').on('click',function(e){
+        $(".top").addClass('active2');
+        $(".high").removeClass('active2');
+        $(".mid").removeClass('active2');
+        $(".mp3").removeClass('active2');
+        format = '1080';
+        if(link!='' || link!= null){
+            mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
+            downloadVideo(mylink,format);
+        }
+    });
+
+    $('.high').on('click',function(e){
+        $(".top").removeClass('active2');
+        $(".high").addClass('active2');
+        $(".mid").removeClass('active2');
+        $(".mp3").removeClass('active2');
+        format = '720';
+        if(link!='' || link!= null){
+            mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
+            downloadVideo(mylink,format);
+        }
+    });
+
+    $('.mid').on('click',function(e){
+        $(".top").removeClass('active2');
+        $(".high").removeClass('active2');
+        $(".mid").addClass('active2');
+        $(".mp3").removeClass('active2');
+        format = '480';
+        if(link!='' || link!= null){
+            mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
+            downloadVideo(mylink,format);
+        }
+    });
+
+    $('.mp3').on('click',function(e){
+        $(".top").removeClass('active2');
+        $(".high").removeClass('active2');
+        $(".mid").removeClass('active2');
+        $(".mp3").addClass('active2');
+        format = 'mp3'
+        if(link!='' || link!= null){
+            mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
+            downloadVideo(mylink,format);
+        }
+    });
+    
     function downloadVideo(link, format){
         $(".download-video").show();
-
         $(".download-video").html('<iframe style="width:230px;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+format+'"></iframe>');
     }
     
