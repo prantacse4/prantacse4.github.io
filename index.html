@@ -85,7 +85,7 @@
         format = '1080';
         if(link!='' || link!= null){
             mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
-            downloadVideo(mylink,format);
+            downloadVideo(mylink);
         }
     });
 
@@ -97,7 +97,7 @@
         format = '720';
         if(link!='' || link!= null){
             mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
-            downloadVideo(mylink,format);
+            downloadVideo(mylink);
         }
     });
 
@@ -109,9 +109,10 @@
         format = '480';
         if(link!='' || link!= null){
             mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
-            downloadVideo(mylink,format);
+            downloadVideo(mylink);
         }
     });
+    
 
     $('.mp3').on('click',function(e){
         $(".top").removeClass('active2');
@@ -121,13 +122,13 @@
         format = 'mp3'
         if(link!='' || link!= null){
             mylink = 'https://loader.to/api/button/?url='+link+'&f='+format;
-            downloadVideo(mylink,format);
+            downloadVideo(mylink);
         }
     });
     
-    function downloadVideo(link, format){
+    function downloadVideo(mylink){
         $(".download-video").show();
-        $(".download-video").html('<iframe style="width:230px;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+format+'"></iframe>');
+        $(".download-video").html('<iframe style="width:230px;height:60px;border:0;overflow:hidden;" scrolling="no" src="'+mylink+'"></iframe>');
     }
     
 </script>
