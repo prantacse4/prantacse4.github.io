@@ -7,12 +7,64 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="./css/basestyle.css">
+<link rel="stylesheet" href="./css/navbar.css">
+<link rel="stylesheet" href="./css/text.css">
 <link rel="stylesheet" href="./css/background.css">
 <link rel="stylesheet" href="./css/style.css">
-<title>Downloader</title>
+<title>Pranta</title>
 </head>
 <body>
-    <div class="container">
+
+
+
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light justify-content-between mynav">
+        <a href="#" class="navbar-brand">
+            Pranta
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link active">HOME</a>
+                <a href="#" class="nav-item nav-link">ABOUT ME</a>
+                <a href="#" class="nav-item nav-link">SKILLS</a>
+                <a href="#" class="nav-item nav-link">PROJECTS</a>
+                <a href="#" class="nav-item nav-link">EXPERIENCE</a>
+                <a href="#" class="nav-item nav-link">CONTACT</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <section class="firstpage">
+        <div class="container">
+            <div class="myname">
+                <h4 class="txt">আমি</h4>
+                <h1 class="redf"><b>প্রান্ত কুমার বিশ্বাস</b></h1>
+                <h5 class="ml9 txt">
+                    <span class="text-wrapper">
+                      <span class="letters">Full Stack Web Developer</span>
+                    </span>
+                  </h5>
+                
+                  
+            </div>
+            
+        </div>
+        <div id="particles-js">
+        </div>
+    </section>
+
+    
+
+
+<section class="section2">
+    <div class="container ">
 
         <div class="mycontainer">
             <div class="glasscard">
@@ -56,6 +108,8 @@
         </div>
 
     </div>
+</section>
+    
 
 
 
@@ -63,7 +117,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="./JS/particle.js"></script>
+<script src="./JS/particle_app.js"></script>
 
+<script>
+    var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+<script>
+    
+</script>
 <script>
     $(".download-video").hide();
     $(".res").hide();

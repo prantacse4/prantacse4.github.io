@@ -1,0 +1,10 @@
+.mynav {
+    padding: 1.5rem 3rem;
+    background: none !important;
+}
+.navbar-light .navbar-brand {
+    color: var(--fontcolor);
+}
+.nav-link {
+    color: var(--fontcolor) !important;
+}
