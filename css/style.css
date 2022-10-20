@@ -1297,3 +1297,23 @@ section-7 {
         opacity: 1;
     }
 }
+
+@media (max-width: 520px) {
+.navbar-brand{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-right: 0rem;
+}
+.navbar-toggler{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+
+}
+.navbar-toggler-awesome{
+    font-size: 1.3rem;
+
+}
+
+}
