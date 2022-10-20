@@ -275,6 +275,10 @@ svg {
     background: black;
     align-items: center;
     position: relative;
+    
+}
+.slicks {
+    height: 250px;
 }
 
 .slicks h1 {
@@ -1073,9 +1077,7 @@ section-7 {
         box-shadow: 30px 20px 92px 35px rgb(255 255 255 / 38%);
         display: none;
     }
-    .programming_slide {
-        display: none;
-    }
+  
     .science_slide {
         box-shadow: 30px 20px 92px 35px rgb(255 255 255 / 38%);
         display: none;
@@ -1284,6 +1286,9 @@ section-7 {
     }
     .shortnamevarsity h4 {
         font-size: .6rem;
+    }
+    .programming_slide {
+        margin-top: 2rem;
     }
 }
 
