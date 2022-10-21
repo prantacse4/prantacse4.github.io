@@ -134,13 +134,20 @@ svg {
 .numbers {
     background: white;
 }
-
+.sections {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+}
+.sections p{
+    text-align: justify;
+}
+.home p{
+    text-align: justify;
+}
 .section2 {
     min-height: 100vh;
-    background: white;
     margin-top: 3rem;
     padding-top: 7rem;
-    text-align: center;
 }
 
 .headsection {
@@ -175,6 +182,15 @@ svg {
     padding-left: 5vw;
     margin: 5vh 1vw;
     padding-right: 5vw;
+}
+
+.res_img_event {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 11rem;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .indiv:hover {
