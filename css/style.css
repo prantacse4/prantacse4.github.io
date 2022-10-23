@@ -49,6 +49,9 @@
     --purple: #6900c7;
     --pink: #e30059;
 }
+*{
+    font-family: "Roboto", sans-serif;
+}
 .p2{
     padding-top:6.5rem;
 }
@@ -277,13 +280,15 @@ svg {
 }
 
 .slicks img {
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     z-index: -111;
 }
+
 
 .slicks {
     display: flex;
@@ -335,6 +340,10 @@ svg {
 }
 
 .posimage img {
+    background-size: cover;
+background-position-x: center;
+background-position-y: center;
+background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     border-radius: 1rem;
@@ -669,6 +678,7 @@ section-7 {
 }
 
 .footerlogo img {
+    
     width: 5rem;
     margin: 0.8rem;
 }
