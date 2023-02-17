@@ -44,10 +44,10 @@ window.addEventListener("scroll", () => {
 $(window).on('scroll load', function() {
     if ($(".navbar").offset().top > 60) {
         $(".fixed-top").addClass("top-nav-collapse");
-        $(".navbar-brand").addClass("text-dark");
+        $(".navbar-brand").addClass("text-white");
     } else {
         $(".fixed-top").removeClass("top-nav-collapse");
-        $(".navbar-brand").removeClass("text-dark");
+        $(".navbar-brand").removeClass("text-white");
 
     }
 });
