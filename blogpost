@@ -52,12 +52,12 @@
    <!-- Navigation -->
    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
       <!-- Text Logo - Use this if you don't have a graphic logo -->
-      <!-- <a class="navbar-brand logo-text page-scroll" href="index">Evolo</a> -->
+      <!-- <a class="navbar-brand logo-text page-scroll" href="./">Evolo</a> -->
 
       <!-- Image Logo -->
 
-      <a class="navbar-brand logo-image" href="index"><img src="assets/BU.png" alt="alternative"></a>
-      <a class="navbar-brand logo-image brandname" href="index">ResearchGroup @CSE University of Barishal</a>
+      <a class="navbar-brand logo-image" href="./"><img src="assets/BU.png" alt="alternative"></a>
+      <a class="navbar-brand logo-image brandname" href="./">ResearchGroup @CSE University of Barishal</a>
 
       <!-- Mobile Menu Toggle Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -71,7 +71,7 @@
          <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-               <a class="nav-link page-scroll" href="index">Home </a>
+               <a class="nav-link page-scroll" href="./">Home </a>
            </li>
            <li class="nav-item">
                <a class="nav-link page-scroll" href="research">Research</a>
