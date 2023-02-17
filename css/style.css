@@ -67,6 +67,10 @@ p {
 .myborder{
     border-top: 1px dotted rgb(216, 216, 216);
 }
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+}
 .home {
     min-height: 10vh;
     background: #ffffff;
